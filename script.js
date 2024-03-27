@@ -1,7 +1,6 @@
 // Function returns a random choice for Rock Paper Scissors(RPS)for the Computer.
 function getComputerChoice() {
     rand = Math.floor(Math.random() * 3) + 1
-
     if (rand == 1 ) {
         return "rock"
     } else if (rand == 2) {
@@ -49,29 +48,11 @@ function playRound(playerSelection, computerSelection) {
     }   
 }
 
-function playGame(){
-    playerScore = 0
-    computerScore = 0
+const button = document.querySelectorAll("button"); // This querys all buttons
 
-    for (let i = 0; i < 5; i++){
-        playerSelection = prompt("Enter your selection: ")
-        computerSelection = getComputerChoice()
-        result = playRound(playerSelection, computerSelection)
-
-        if (result == undefined){
-            console.log("Tie")
-        } else if (result){
-            playerScore++;
-        } else {
-            computerScore++;
-        }
-    }
-
-    if (playerScore > computerScore){
-        console.log("Congratulations!!! the final score was " + playerScore + " : " + computerScore)
-    } else {
-        console.log("Better luck next time! the final score was " + playerScore + " : " + computerScore)
-    }
-}
-
-playGame()
+button.forEach((button) => {    // loops through the node list of buttons.
+    button.addEventListener("click", () => {    // for each button we add a listener
+        playerSelection = button.getAttribute("id");
+        playRound(playerSelection, getComputerChoice());
+    });
+});
