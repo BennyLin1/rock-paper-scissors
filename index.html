@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
-        
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="game icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">ROCK PAPER SCISSORS</div>
+    <div class="header">ROCK - PAPER - SCISSORS</div>
 
     <p>First to 5 points wins</p>
     <div class="scoreContainer">
-        <div class="playerScore">😃 SCORE: ?</div>
-        <div class="computerScore">🤖 SCORE: ?</div>
+        <div class="playerScore">😃 PLAYER SCORE: ?</div>
+        <div class="computerScore">🤖 ROBOT! SCORE: ?</div>
     </div>
 
-    <div class="result">TEMP</div>
+    <div class="resultContainer">
+        <div class="playerContainer">
+            <div id="playerDisplay">?</div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="computerContainer">
+            <div id="computerDisplay">?</div>
+        </div>
+    </div>
+    <div class="roundInfo">
+        Choose your weapon!
+    </div>
 
     <div class="selectionContainer">
         <button id="rock">🗿</button>
-        <button id="scissor">🧻</button>
-        <button id="paper">⚔️</button>
+        <button id="paper">🧻</button>
+        <button id="scissor">⚔️</button>
     </div>
 
     <div class="footer"> Copyright © 2024 bennylin1 </div>

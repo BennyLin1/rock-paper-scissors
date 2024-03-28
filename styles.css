@@ -6,10 +6,10 @@ body{
 .header {
     display: flex;
     justify-content: center;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 50px;
+    padding: 25px;
     color: white;
     background-color: #201f1f;
 }
@@ -17,7 +17,7 @@ body{
 p {
     display: flex;
     justify-content: center;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -26,22 +26,66 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 350px;
+}
+
+.resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    flex-wrap: space-around;
     gap: 200px;
 }
 
+.playerContainer,.computerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .playerScore, .computerScore{
+    align-items: center;
     font-size: 50px;
-    padding: 50px;
+    padding: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#playerDisplay,#computerDisplay {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 250px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.versus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.roundInfo {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .selectionContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    gap: 25px;
+    padding: 50px;
+    gap: 30px;
 }
 
 .result {
@@ -53,7 +97,7 @@ p {
 }
 
 /* Button CSS from --> Paper CSS */
-button {
+#rock,#paper,#scissor {
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -97,8 +141,30 @@ button:focus {
 
 .footer {
     background-color: #201f1f;
-    padding: 10px;
     font-size: 18px;
     color: white;
     text-align: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.endGameContainer {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
 }
